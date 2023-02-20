@@ -18,8 +18,8 @@ class AppWebViewClient : WebViewClient() {
         private const val LOG_TAG = "WebViewClient"
     }
 
-    override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
-        return true // Open any external URL via external browser
+    override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
+        return false // Open any external URL via external browser
     }
 
     override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
